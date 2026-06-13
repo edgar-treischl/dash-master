@@ -6,9 +6,27 @@ const meta: Meta<typeof BarPlot> = {
   title: 'Graphs/BarPlot',
   component: BarPlot,
   parameters: {
+    docs: {
+      description: {
+        component: BarPlot.peek.description,
+      },
+    },
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    year: {
+      description: 'School year label',
+      control: { type: 'text' },
+    },
+    maxPercent: {
+      description: 'Fixed maximum percentage for scaling',
+      control: { type: 'number' },
+    },
+    data: {
+      description: 'Array of school type data with counts and percentages',
+    },
+  },
 }
 
 export default meta

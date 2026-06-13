@@ -22,6 +22,12 @@ type BarPlotProps = {
   maxPercent?: number
 }
 
+type ComponentPeek = {
+  description: string
+  categories: string[]
+  madeFrom: string[]
+}
+
 function BarPlotComponent({ data, year, maxPercent: customMaxPercent }: BarPlotProps) {
   const chartInnerWidth = CHART_WIDTH - CHART_PADDING.left - CHART_PADDING.right
 
@@ -76,4 +82,10 @@ function BarPlotComponent({ data, year, maxPercent: customMaxPercent }: BarPlotP
   )
 }
 
-export const BarPlot = memo(BarPlotComponent)
+export const BarPlot = Object.assign(memo(BarPlotComponent), {
+  peek: {
+    description: 'A horizontal bar chart component for visualizing school type distribution data with percentage values.',
+    categories: ['visualizations', 'charts'],
+    madeFrom: [],
+  } as ComponentPeek,
+})
