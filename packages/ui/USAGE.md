@@ -19,6 +19,8 @@ npm install github:edgar-treischl/dash-master/packages/ui
 yarn add github:edgar-treischl/dash-master/packages/ui
 ```
 
+> **Note:** You must include `/packages/ui` because dash-master is a **monorepo**. The root directory only defines the workspace; the actual component library is in the `packages/ui` subdirectory.
+
 **Import components:**
 ```typescript
 import { BarPlot } from 'dash-ui'
