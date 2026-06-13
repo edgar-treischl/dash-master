@@ -1,2 +1,2 @@
 // src/index.ts
-export { BarPlot } from "./BarPlot";
+export { BarPlot } from "./BarPlot/BarPlot";

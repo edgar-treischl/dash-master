@@ -8,7 +8,7 @@ import {
   SCHOOL_TYPE_COLORS,
   SCHOOL_TYPE_LABELS,
   type SchoolType,
-} from './retention' // adjust path if needed
+} from '../retention' // adjust path if needed
 
 type BarData = {
   type: SchoolType

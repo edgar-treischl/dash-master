@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { BarPlot } from './BarPlot'
-import type { SchoolType } from './retention'
+import type { SchoolType } from '../retention'
 
 const meta: Meta<typeof BarPlot> = {
-  title: 'Components/BarPlot',
+  title: 'BarPlot/BarPlot',
   component: BarPlot,
   parameters: {
     layout: 'centered',
