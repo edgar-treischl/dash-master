@@ -6,6 +6,7 @@ import {
   CHART_WIDTH,
   formatPercent,
   SCHOOL_TYPE_COLORS,
+  SCHOOL_TYPE_LABELS,
   type SchoolType,
 } from './retention' // adjust path if needed
 
@@ -32,6 +33,9 @@ function BarPlotComponent({ data, year, maxPercent: customMaxPercent }: BarPlotP
   return (
     <svg
       viewBox={`0 0 ${CHART_WIDTH} ${CHART_HEIGHT}`}
+      width={CHART_WIDTH}
+      height={CHART_HEIGHT}
+      style={{ border: '1px solid #eee' }}
     >
       <text x={CHART_PADDING.left} y={CHART_PADDING.top - 10} fontSize="12">
         {year}
@@ -42,6 +46,15 @@ function BarPlotComponent({ data, year, maxPercent: customMaxPercent }: BarPlotP
 
         return (
           <g key={item.type}>
+            <text
+              x={CHART_PADDING.left - 10}
+              y={y + barHeight / 2}
+              textAnchor="end"
+              fontSize="12"
+              fill="#666"
+            >
+              {SCHOOL_TYPE_LABELS[item.type]}
+            </text>
             <rect
               x={CHART_PADDING.left}
               y={y}
@@ -52,6 +65,7 @@ function BarPlotComponent({ data, year, maxPercent: customMaxPercent }: BarPlotP
             <text
               x={CHART_PADDING.left + width + 10}
               y={y + barHeight / 2}
+              fontSize="12"
             >
               {formatPercent(item.percent)}
             </text>
