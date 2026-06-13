@@ -3,7 +3,7 @@ import { BarPlot } from './BarPlot'
 import type { SchoolType } from '../retention'
 
 const meta: Meta<typeof BarPlot> = {
-  title: 'BarPlot/BarPlot',
+  title: 'Graphs/BarPlot',
   component: BarPlot,
   parameters: {
     layout: 'centered',

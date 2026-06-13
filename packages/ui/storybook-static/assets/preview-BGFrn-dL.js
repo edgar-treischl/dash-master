@@ -1,1 +1,0 @@
-var e={parameters:{layout:`centered`,docs:{toc:!0}}};export{e as default};
