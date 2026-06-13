@@ -41,13 +41,13 @@ export const SCHOOL_TYPE_MAPPING: Record<string, SchoolType> = {
   'Gesamt': 'IGS', // legacy mapping
 }
 
-// Reverse mapping from abbreviations to full names
+// Reverse mapping from abbreviations to display labels
 export const SCHOOL_TYPE_LABELS: Record<SchoolType, string> = {
-  'GS': 'Grundschulen',
-  'MS': 'Mittelschulen',
-  'RS': 'Realschulen',
-  'GY': 'Gymnasien',
-  'IGS': 'Int. Gesamtschule',
+  'GS': 'GS',
+  'MS': 'MS',
+  'RS': 'RS',
+  'GY': 'GY',
+  'IGS': 'IGS',
 }
 
 export type SchoolType = (typeof SCHOOL_TYPES)[number]
