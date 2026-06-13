@@ -1,4 +1,4 @@
-name: Deploy Playground to GitHub Pages
+name: Deploy Storybook to GitHub Pages
 
 on:
   push:
@@ -42,13 +42,13 @@ jobs:
       - name: Build UI library
         run: cd packages/ui && pnpm build
 
-      - name: Build playground
-        run: cd apps/playground && pnpm build
+      - name: Build Storybook
+        run: cd packages/ui && pnpm storybook:build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'apps/playground/dist'
+          path: 'packages/ui/storybook-static'
 
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -61,3 +61,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
