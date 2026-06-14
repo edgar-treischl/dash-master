@@ -30,6 +30,8 @@ pnpm add github:edgar-treischl/dash-master/packages/ui
 
 ## Quick Example
 
+### BarPlot for Data Visualization
+
 ```tsx
 import { BarPlot } from 'dash-ui'
 
@@ -40,6 +42,27 @@ export function MyComponent() {
   ]
 
   return <BarPlot data={data} year="2024/25" />
+}
+```
+
+### YearSelect with Icon for Year Filtering
+
+```tsx
+import { YearSelect, SelectIcon } from 'dash-ui'
+import { useState } from 'react'
+
+export function FilterComponent() {
+  const [selectedYear, setSelectedYear] = useState('2024/25')
+
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <SelectIcon />
+      <YearSelect 
+        value={selectedYear}
+        onChange={setSelectedYear}
+      />
+    </div>
+  )
 }
 ```
 
