@@ -50,6 +50,15 @@ export const SCHOOL_TYPE_LABELS: Record<SchoolType, string> = {
   'IGS': 'IGS',
 }
 
+// School years available for selection
+export const SCHOOL_YEARS = [
+  '2024/25',
+  '2023/24',
+  '2022/23',
+  '2021/22',
+  '2020/21',
+] as const
+
 export type SchoolType = (typeof SCHOOL_TYPES)[number]
 export type SchoolTypeFilter = SchoolType | 'All school types'
 export type SchoolYear = string // e.g., "2024/25"
